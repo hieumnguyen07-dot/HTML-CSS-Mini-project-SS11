@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bún Chả Hà Nội - Hương Vị Hà Nội Xưa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-orange: #E76F51;
+            --dark-brown: #3C2F2F;
+            --bg-cream: #FFF8F0;
+            --text-color: #333;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 8%;
+            background-color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .logo { font-size: 24px; font-weight: bold; color: var(--primary-orange); }
+        nav { display: flex; gap: 30px; }
+        nav a { text-decoration: none; color: var(--dark-brown); font-weight: 500; }
+        nav a:hover { color: var(--primary-orange); }
+        .btn-order {
+            background-color: var(--primary-orange);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('https://images.pexels.com/photos/2310641/pexels-photo-2310641.jpeg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        .hero-content { max-width: 800px; padding: 20px; }
+        .hero h1 { font-size: 4rem; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; margin-bottom: 30px; }
+        .hero .btn-hero {
+            background-color: var(--primary-orange);
+            padding: 15px 35px;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+        .featured { padding: 80px 8%; text-align: center; }
+        .featured h2 { font-size: 2.5rem; color: var(--primary-orange); margin-bottom: 50px; }
+        .featured-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: #fff;
+            flex: 1;
+            min-width: 300px;
+            max-width: 350px;
+            border-radius: 15px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .card:hover { transform: translateY(-10px); }
+        .card img { width: 100%; height: 230px; object-fit: cover; }
+        .card-body { padding: 25px; text-align: left; flex-grow: 1; }
+        .card-body h3 { margin-bottom: 10px; font-size: 1.4rem; }
+        .price { color: var(--primary-orange); font-weight: bold; font-size: 1.2rem; margin-bottom: 10px; display: block; }
+        .card-body p { font-size: 0.95rem; color: #666; }
+
+        .full-menu { padding: 60px 8%; background-color: #fff; text-align: center; }
+        .full-menu h2 { font-size: 2.5rem; color: var(--primary-orange); margin-bottom: 40px; }
+
+        .menu-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            flex: 0 1 calc(33% - 20px);
+            min-width: 280px;
+            background: var(--bg-cream);
+            padding: 15px 20px;
+            border-radius: 8px;
+        }
+        .menu-item .m-name { font-weight: 500; }
+        .menu-item .m-price { color: var(--primary-orange); font-weight: bold; }
+        footer {
+            background-color: var(--dark-brown);
+            color: #ccc;
+            padding: 60px 8% 20px;
+        }
+        .footer-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-col { flex: 1; }
+        .footer-col h4 { color: #fff; margin-bottom: 20px; border-left: 3px solid var(--primary-orange); padding-left: 10px; }
+        .footer-col p { font-size: 0.9rem; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Bún Chả Hà Nội</div>
+        <nav>
+            <a href="#">Trang chủ</a>
+            <a href="#">Menu</a>
+            <a href="#">Đặt bàn</a>
+            <a href="#">Liên hệ</a>
+        </nav>
+        <a href="#" class="btn-order">Đặt bàn ngay</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hương Vị Hà Nội Xưa</h1>
+            <p>Bún chả nướng than hoa, nước chấm gia truyền, rau sống tươi sạch mỗi ngày. Không gian ấm cúng như ở nhà.</p>
+            <a href="#" class="btn-hero">Đặt bàn hôm nay</a>
+        </div>
+    </section>
+
+    <section class="featured">
+        <h2>Món Nổi Bật</h2>
+        <div class="featured-grid">
+            <div class="card">
+                <img src="https://images.pexels.com/photos/10305721/pexels-photo-10305721.jpeg" alt="Bún Chả Đặc Biệt">
+                <div class="card-body">
+                    <h3>Bún Chả Đặc Biệt</h3>
+                    <span class="price">95.000đ</span>
+                    <p>Chả nướng than hoa thơm lừng, thịt tươi mềm, nước chấm cân bằng chua ngọt.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/4553338/pexels-photo-4553338.jpeg" alt="Nem Hà Nội">
+                <div class="card-body">
+                    <h3>Nem Hà Nội</h3>
+                    <span class="price">60.000đ / 4 cái</span>
+                    <p>Nem rán giòn tan, nhân thịt + mộc nhĩ + bún tàu, chấm nước mắm pha.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/2092906/pexels-photo-2092906.jpeg" alt="Phở Bò Tái">
+                <div class="card-body">
+                    <h3>Phở Bò Tái</h3>
+                    <span class="price">85.000đ</span>
+                    <p>Nước dùng ninh 12 tiếng, thịt bò tươi tái lăn, bánh phở dai mềm.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="full-menu">
+        <h2>Thực Đơn</h2>
+        <div class="menu-list">
+            <div class="menu-item"><span class="m-name">Bún chả thường</span> <span class="m-price">75.000đ</span></div>
+            <div class="menu-item"><span class="m-name">Bún chả đặc biệt</span> <span class="m-price">95.000đ</span></div>
+            <div class="menu-item"><span class="m-name">Phở bò tái nạm</span> <span class="m-price">85.000đ</span></div>
+            <div class="menu-item"><span class="m-name">Phở gà</span> <span class="m-price">80.000đ</span></div>
+            <div class="menu-item"><span class="m-name">Nem Hà Nội (4 cái)</span> <span class="m-price">60.000đ</span></div>
+            <div class="menu-item"><span class="m-name">Trà đá</span> <span class="m-price">10.000đ</span></div>
+            <div class="menu-item"><span class="m-name">Coca / Pepsi</span> <span class="m-price">20.000đ</span></div>
+            <div class="menu-item"><span class="m-name">Bia hơi Hà Nội</span> <span class="m-price">25.000đ</span></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Bún Chả Hà Nội</h4>
+                <p>Hương vị truyền thống hơn 30 năm. Không gian ấm cúng - phục vụ tận tình.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Giờ mở cửa</h4>
+                <p>Thứ 2 - Thứ 7: 10:00 - 21:00</p>
+                <p>Chủ nhật: 10:00 - 20:00</p>
+            </div>
+            <div class="footer-col">
+                <h4>Liên hệ</h4>
+                <p>📍 12 Hàng Mành, Hoàn Kiếm, Hà Nội</p>
+                <p>☎️ 024 3825 1234</p>
+                <p>📧 0988 888 888</p>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 Bún Chả Hà Nội - Mini Project
+        </div>
+    </footer>
+
+</body>
+</html>
